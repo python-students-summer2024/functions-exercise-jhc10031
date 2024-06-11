@@ -14,6 +14,7 @@ def roll_die():
     :returns: the pseudo-random integer.
     """
     # complete this function below here
+    print(random.randint())
 
 
 def get_question_type():
@@ -24,6 +25,11 @@ def get_question_type():
     :returns: "sum" for an addition question, "difference" for a subtraction question.
     """
     # complete this function below here
+    if random.randint() == 1 or random.randint() == 3 or random.randint() == 5:
+        print("sum")
+    if random.randing() == 2 or random.randint() == 4 or random.randint() == 6:
+        print("difference")
+
 
 
 def print_question(die_1_value, die_2_value, question_type):
@@ -43,6 +49,13 @@ def print_question(die_1_value, die_2_value, question_type):
     :returns: None
     """
     # complete this function below here
+    die_1_value = random.randint()
+    die_2_value = random.randint()
+    if random.randint() == 1 or random.randint() == 3 or random.randint() == 5:
+        question_type = print("sum")
+    if random.randing() == 2 or random.randint() == 4 or random.randint() == 6:
+        question_type = print("difference")
+    print("You rolled a " + die_1_value + " and a " + die_2_value + "... What is the " + question_type + " between " + die_1_value " and " + die_2_value)
 
 
 def input_answer():
@@ -56,6 +69,10 @@ def input_answer():
     :returns: The user's answer, as an int, if valid; or -1 if the user's response was not valid.
     """
     # complete this function below here
+    recent = input("What was your answer to the most recent question?")
+
+    print(int(recent))
+
 
 
 def is_correct_answer(die_1_value, die_2_value, question_type, given_answer):
